@@ -5,11 +5,14 @@
 <div align="center">
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
 ![Docker Badge](https://img.shields.io/badge/docker-0db7ed?style=flat&logo=docker&logoColor=white)
 ![JSON Badge](https://img.shields.io/badge/json-f5ab59?style=flat&logo=json&logoColor=white&color=4bc61d)
 </div>
 
-_Porfolio_ minimalista configurable a través de un simple fichero JSON: `cv.json`
+_Porfolio_ minimalista configurable a través de un simple fichero JSON. 
+
+Inspirado en el _porfolio_ de [@midudev](https://github.com/midudev/porfolio.dev), y a su vez en el de [@BartoszJarocki](https://github.com/BartoszJarocki/cv). 
 
 
 
@@ -19,10 +22,28 @@ _Porfolio_ minimalista configurable a través de un simple fichero JSON: `cv.jso
 
 ## Uso
 
-### A. De forma local
+<details>
+<summary>Usando este repositorio</summary>
+
+### 1. Descarga `nodejs` en tu ordenador
+### 2. Haz _fork_ de este repositorio en GitHub y luego `git clone` en local
+```shell
+git clone git@github.com:letesdev/portfolio.git
+```
+### 3. Instala todas las dependencias
+```shell
+cd portfolio
+npm install
+```
+### 4. Añade tu contenido en el fichero `cv.json`.
+### 5. Lanza el servidor de desarrollo
+```shell
+npm run dev
+```
+</details>
 
 <details>
-<summary>Instrucciones de @midudev</summary>
+<summary>Usando la repo de @midudev como template</summary>
 
 ### 1. Usa la repo de midudev como template
 ```bash
@@ -52,10 +73,8 @@ pnpm dev
 
 </details>
 
-### B. Usando docker
-
 <details>
-<summary>Instrucciones de @BartoszJarocki</summary>
+<summary>Usando la imagen `docker`de @BartoszJarocki</summary>
 
 ### 1. Construye el container
 ```bash
