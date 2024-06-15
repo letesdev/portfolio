@@ -3,7 +3,7 @@
 const { title, link, link_title } = Astro.props
 ---
 
-<section class="max-w-3xl mx-auto mt-4 mb-2" >
+<section class="dark:text-white max-w-3xl mx-auto mt-4 mb-2" >
   {title && !link && <h2 class="text-2xl leading-6 font-headers font-bold mb-2">{title}</h2>}
   {title && link && <h2 class="text-2xl leading-6 font-headers font-bold mb-2"><a href={link} title={link_title} target="_blank" class="hover:underline text-clip">{title}</a></h2>}
   <slot />
