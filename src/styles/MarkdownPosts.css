@@ -109,3 +109,17 @@ figcaption {
         font-size: 1rem;
     }
 }
+
+@media(prefers-color-scheme: dark){
+    .toc {
+        background: rgb(51 65 85) none repeat scroll 0 0; /* bg-slate-700 */
+    }
+    
+    .toc_title {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    p {
+        color: rgb(148 163 184); /*text-slate-400*/
+    }
+}
