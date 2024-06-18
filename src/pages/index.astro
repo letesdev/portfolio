@@ -12,11 +12,13 @@ import Writings from "@/components/sections/Writings.astro"
 
 import { basics } from "@cv"
 import Readings from "@/components/sections/Readings.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro"
 const { name, label } = basics
 ---
 
 <Layout title={`${name} - ${label}`}>
   <main class="p-8 sm:mx-auto sm:w-full sm:p-4">
+    <ThemeToggle/>
     <Hero />
     <About />
     <Skills />
