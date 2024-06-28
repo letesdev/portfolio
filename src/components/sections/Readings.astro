@@ -2,8 +2,9 @@
 import GoodReadsWidget from "../GoodReadsWidget.astro"
 import Section from "../Section.astro"
 
+const {id} = Astro.props
 ---
 
-<Section title="Lecturas" link ="https://www.goodreads.com/user/show/125419470-carlos", link_title="Ver el perfil GoodReads de Carlos">
+<Section id={id} title="Lecturas" link ="https://www.goodreads.com/user/show/125419470-carlos", link_title="Ver el perfil GoodReads de Carlos">
     <GoodReadsWidget></GoodReadsWidget>
 </Section>

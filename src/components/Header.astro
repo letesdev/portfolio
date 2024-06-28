@@ -1,14 +1,95 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
+
+const navItems = [
+    {
+        title: "Sobre mí",
+        label: "sobre-mi",
+        url: "/portfolio#sobre-mi",
+    },
+    {
+        title: "Proyectos",
+        label: "proyectos",
+        url: "/portfolio#proyectos",
+    },
+    {
+        title: "Lecturas",
+        label: "lecturas",
+        url: "/portfolio#lecturas",
+    },
+    {
+        title: "Ensayos",
+        label: "ensayos",
+        url: "/portfolio#ensayos",
+    },
+];
 ---
 
 <!-- <header class="fixed flex items-center justify-center w-full mx-auto m-2 z-10" > -->
-<header class="fixed flex items-center justify-end top-0 right-0 sm:right-56 m-3 z-10">
-
-    <nav class="flex max-w-3xl mx-auto py-3 px-3 rounded-full text-gray-600 dark:text-gray-200 justify-end items-center">
+<header
+    class="fixed flex items-center justify-center w-full top-0 mx-auto z-10 m-4"
+>
+    <nav
+        class="flex max-w-3xl mx-auto py-1 px-3 rounded-full text-gray-700 dark:text-gray-200 justify-center items-center"
+    >
+        {
+            navItems.map((link) => (
+                <a
+                    class="relative block px-2 py-2 transition hover:text-red-500 dark:hover:text-red-400"
+                    aria-label={link.label}
+                    href={link.url}
+                >
+                    {link.title}
+                </a>
+            ))
+        }
         <ThemeToggle />
     </nav>
 </header>
+
+<script>
+    console.log("astro:page-load not fired");
+    document.addEventListener("astro:page-load", () => {
+        console.log("astro:page-load fired");
+        const sections = document.querySelectorAll("section");
+        const navItems = document.querySelectorAll("header nav a");
+
+        const callback = (entries: any[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navItems.forEach((item) => {
+                        if (item.getAttribute("aria-label") == entry.target.id) {
+                            item.classList.add("text-slate-700");
+                        } else {
+                            item.classList.remove("text-slate-700");
+                        }
+                    });
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.3,
+        });
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Cleanup function
+        document.onvisibilitychange = () => {
+            if (document.visibilityState === "hidden") {
+                observer.disconnect();
+            } else {
+                sections.forEach((section) => {
+                    observer.observe(section);
+                });
+            }
+        };
+    });
+</script>
 
 <style>
     nav {

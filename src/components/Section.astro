@@ -1,9 +1,9 @@
 ---
 // se ejecuta en el servidor o en build time <----
-const { title, link, link_title } = Astro.props
+const { title, link, link_title, id } = Astro.props
 ---
 
-<section class="dark:text-white max-w-3xl mx-auto mt-4 mb-2" >
+<section id={id} data-section={id} class="dark:text-white max-w-3xl mx-auto mt-4 mb-2" >
   {title && !link && <h2 class="text-2xl leading-6 font-headers font-bold mb-2">{title}</h2>}
   {title && link && <h2 class="text-2xl leading-6 font-headers font-bold mb-2"><a href={link} title={link_title} target="_blank" class="hover:underline text-clip">{title}</a></h2>}
   <slot />

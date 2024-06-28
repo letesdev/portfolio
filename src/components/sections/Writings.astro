@@ -5,9 +5,12 @@ import Section from "../Section.astro";
 // const allPosts = await Astro.glob("../../pages/posts/*.mdx");
 const allPosts = await getCollection("posts", ({data}) => {return data.draft == false;});
 const maxPosts = 3;
+
+const {id} = Astro.props
+
 ---
 
-<Section title="Ensayos">
+<Section title="Ensayos" id={id}>
     <!-- <BlogPostsPreview /> -->
     <ul>
         {
