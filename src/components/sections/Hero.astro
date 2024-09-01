@@ -7,15 +7,18 @@ import X from "@/icons/X.astro"
 import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
+import CV from "@/icons/cv.astro"
 import type { SocialIcon } from "@/types"
+import Cv from "@/icons/cv.astro"
 
-const { name, label, image, location, profiles, email } = basics
+const { name, label, image, location, profiles, email, cv } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
   X,
+  CV,
 }
 
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
@@ -76,6 +79,18 @@ const printInfo = [email, linkedUrl].filter(Boolean).join(" • ")
               </a>
             )
           })
+        }
+        {
+          cv && (
+            <a
+              href={cv}
+              title={`Ver curriculum vitae`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CV />
+            </a>
+          )
         }
       </footer>
     </div>
