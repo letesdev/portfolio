@@ -112,17 +112,17 @@
   }],
   "skills": [
     {
+      "name": "Python",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
       "name": "ROS",
       "level": "Avanzado",
       "keywords": [
         "Robotics"
-      ]
-    },
-    {
-      "name": "Docker",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
       ]
     },
     {
@@ -133,14 +133,21 @@
       ]
     },
     {
-      "name": "GitHub",
+      "name": "MySQL",
       "level": "Avanzado",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
     },
     {
-      "name": "Python",
+      "name": "Firebase",
+      "level": "Avanzado",
+      "keywords": [
+        "Backend"
+      ]
+    },
+    {
+      "name": "Docker",
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Frontend"
@@ -151,13 +158,6 @@
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Frontend"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
     },
     {
@@ -232,11 +232,11 @@
       "highlights": [
         "Game",
         "Static Web",
-        "GitHub Pages",
+        "Firebase",
         "Astro",
         "Javascript"
       ],
-      "url": "https://letesdev.github.io/bingoletes/",
+      "url": "https://bingoletes.web.app/",
       "github": "https://github.com/letesdev/bingoletes"
     },
     {
