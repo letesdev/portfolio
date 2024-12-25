@@ -7,6 +7,7 @@ export default {
 			fontFamily: {
 				'headers': ['system-ui'],
 				'sans': ['IBM Plex Sans'],
+				'monospace': ['Syne Mono']
 			},
 			letterSpacing: {
 				tighter: '-0.025rem',
