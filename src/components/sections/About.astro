@@ -3,13 +3,17 @@ import Section from "../Section.astro"
 
 import { basics } from "@cv"
 const { summary, quote } = basics
-const {text, book, author} = quote
+const {text, book, author, bookUrl, authorUrl} = quote
 ---
 
 <Section title="Sobre mí">
-  <quote class="dark:text-slate-400 font-sans font-semibold tracking-tight text-justify text-sm">
-    <i>{text}</i> - <b>{book}, {author}.</b>
-  </quote>
+  <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 -mx-5">
+    <p>
+      “{text}” 
+      — <a href={bookUrl} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">{book}</a>, {author}.
+    </p>
+  </blockquote>
+  
   <p class="font-sans text-gray-700 dark:text-slate-400 text-pretty pt-3">
     {summary}
   </p>
