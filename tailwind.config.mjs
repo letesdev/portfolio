@@ -12,6 +12,9 @@ export default {
 			letterSpacing: {
 				tighter: '-0.025rem',
 			},
+			boxShadow: {
+				'inset-custom': 'inset 3px 0px 0 0 #242424',
+			},
 		},
 	},
 	plugins: [],

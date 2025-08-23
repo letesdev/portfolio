@@ -6,7 +6,7 @@
     "image": "/portfolio/me.webp",
     "email": "carlosantos2807@gmail.com",
     "phone": "+34 676040034",
-    "cv": "/portfolio/CV_CSS.pdf",
+    "cv": "/portfolio/CV-Carlos_Santos_Seisdedos-2508.pdf",
     "url": "",
     "quote": {
       "text": "The problem today is most people spend time CONSUMING versus CREATING. Make a real commitment to start creating. It will benefit both your personal and professional life.",
@@ -117,14 +117,21 @@
       "name": "Python",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend"
+        "Desarrollo Web", "Frontend", "Data Structures and Algorithms", "Data Science", "Machine Learning", "Backend", "Fullstack"
       ]
     },
     {
-      "name": "ROS",
+      "name": "Next.js",
       "level": "Avanzado",
       "keywords": [
-        "Robotics"
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "Firebase",
+      "level": "Avanzado",
+      "keywords": [
+        "Backend"
       ]
     },
     {
@@ -135,17 +142,17 @@
       ]
     },
     {
+      "name": "ROS",
+      "level": "Avanzado",
+      "keywords": [
+        "Robotics"
+      ]
+    },
+    {
       "name": "MySQL",
       "level": "Avanzado",
       "keywords": [
         "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Firebase",
-      "level": "Avanzado",
-      "keywords": [
-        "Backend"
       ]
     },
     {
@@ -227,6 +234,20 @@
     "reference": "Reference…"
   }],
   "projects": [
+    {
+      "name": "Cancellati.es",
+      "isActive": true,
+      "description": "Cancellati es el mejor aliado para gerentes de hotel. Predicción de cancelaciones, reserva por reserva, para que tú decidas y actúes.",
+      "highlights": [
+        "WebApp",
+        "Machine Learning",
+        "Static Web",
+        "Node.js",
+        "Next.js",
+        "Firebase"
+      ],
+      "url": "https://cancellati.es"
+    },
     {
       "name": "BingoLetes",
       "isActive": true,
