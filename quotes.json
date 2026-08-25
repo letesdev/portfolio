@@ -20,5 +20,16 @@
     "date": "25-08-2026",
     "author": "Paul Graham",
     "authorUrl": ""
+  }, 
+  {
+    "text": "Every organisation must build human capital (the knowledge, judgment, relationships, and pattern recognition of its people) alongside token capital, the AI capability and institutional learning it builds and owns.",
+    "source": {
+      "type": "tweet",
+      "url": "https://x.com/satyanadella/status/2066182223213293753",
+      "name": "A frontier without an ecosystem is not stable"
+    },
+    "date": "14-07-2026",
+    "author": "Satya Nadella",
+    "authorUrl": "https://x.com/satyanadella"
   }
 ]
