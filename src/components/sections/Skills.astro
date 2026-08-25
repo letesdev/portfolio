@@ -14,7 +14,6 @@ import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
 import ROS from "@/icons/ros.astro";
 import Python from "@/icons/Python.astro"
-import C from "@/icons/C.astro"
 import Docker from "@/icons/docker.astro"
 import Matlab from "@/icons/Matlab.astro"
 import Firebase from "@/icons/Firebase.astro"
@@ -35,7 +34,6 @@ const SKILLS_ICONS: Record<string, any> = {
   Tailwind,
   ROS,
   Python,
-  C,
   Docker,
   Matlab,
   Firebase,
@@ -47,7 +45,6 @@ const SKILLS_ICONS: Record<string, any> = {
     {
       skills.map(({ name }) => {
         const iconName =  name === "Next.js" ? "Next" : 
-                          name === "C/C++" ? "C" :
                           name === "Astro" ? "astro": name;
         const Icon = SKILLS_ICONS[iconName]
 

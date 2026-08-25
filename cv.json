@@ -2,7 +2,7 @@
   "basics": {
     "name": "LetesDev",
     "label": "Ingeniero de Telecomunicaciones y Robótica",
-    "meta": "Ingeniero de Telecomunicaciones y Robótica, con experiencia en ADAS, programación y Cloud.",
+    "meta": "Ingeniero de Telecomunicaciones y Robótica, turned Developer 🚀",
     "image": "/portfolio/me.webp",
     "email": "carlosantos2807@gmail.com",
     "phone": "+34 676040034",
@@ -32,9 +32,23 @@
   "work": [
     {
       "name": "Renault",
+      "position": "Cloud Software Engineer",
+      "startDate": "2024-11-31",
+      "endDate": "2024-12-31",
+      "summary": "I realized I love to ship products, so I've requested a shift to the Cloud team and: now, we're bulding 😎"
+    },
+    {
+      "name": "Renault",
+      "position": "AD Technical Project Manager",
+      "startDate": "2024-11-31",
+      "endDate": "2024-12-31",
+      "summary": "Confidential"
+    },
+    {
+      "name": "Renault",
       "position": "R&AE ADAS Technical Project Manager",
       "startDate": "2023-11-10",
-      "endDate": null,
+      "endDate": "2024-11-31",
       "summary": "Piloto de Innovación ADAS en el departamento de R&AE para la definición y el diseño del próximo sistema frenado automático de emergencia (Automatic Emergency Braking, AEB), anticipándome a los ensayos de la Euro NCAP 2026. Responsable de la coordinación de los recursos y las actividades que comprenden desde las necesidades cliente hasta la validación final (equivalentes a ASPICE): especificaciones sistema, software, safety, de ciberseguridad y electrónicas."
     },
     {
@@ -51,122 +65,92 @@
       "url": "https://twitch.tv/midudev",
       "startDate": "2021-03-01",
       "endDate": "2021-09-01",
-      "tasks": [ "Desarrollo de mapas de alta definición (High Definition Map) para un proyecto de conducción autónoma de nivel 4 (SAE).", "Reestructuración de su arquitectura (red móvil, sistemas de posicionamiento GNSS, etc) para incluir un calculador 5G y desarrollar conexiones V2x.", "Estudio de la seguridad funcional en el proyecto, implementando la norma ISO 26262 y SOTIF: análisis de riesgos y definición de requisitos de seguridad."
+      "tasks": [
+        "Desarrollo de mapas de alta definición (High Definition Map) para un proyecto de conducción autónoma de nivel 4 (SAE).",
+        "Reestructuración de su arquitectura (red móvil, sistemas de posicionamiento GNSS, etc) para incluir un calculador 5G y desarrollar conexiones V2x.",
+        "Estudio de la seguridad funcional en el proyecto, implementando la norma ISO 26262 y SOTIF: análisis de riesgos y definición de requisitos de seguridad."
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
   "education": [
     {
-    "institution": "IMT Atlantique",
-    "url": "https://www.imt-atlantique.fr/en/study/engineering",
-    "area": "Engineering, Major in Robotics ",
-    "studyType": "Master of Science",
-    "startDate": "2019-09-01",
-    "endDate": "2022-09-01",
-    "score": "",
-    "courses": []
-  }, {
-    "institution": "Universidad de Valladolid",
-    "url": "https://www.tel.uva.es/en/studies/degrees/masterit.htm",
-    "area": "Telecommunications Engineering",
-    "studyType": "Bachelor's Degree & Master of Science",
-    "startDate": "2016-09-01",
-    "endDate": "2022-09-01",
-    "score": "",
-    "courses": []
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
+      "institution": "IMT Atlantique",
+      "url": "https://www.imt-atlantique.fr/en/study/engineering",
+      "area": "Engineering, Major in Robotics ",
+      "studyType": "Master of Science",
+      "startDate": "2019-09-01",
+      "endDate": "2022-09-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universidad de Valladolid",
+      "url": "https://www.tel.uva.es/en/studies/degrees/masterit.htm",
+      "area": "Telecommunications Engineering",
+      "studyType": "Bachelor's Degree & Master of Science",
+      "startDate": "2016-09-01",
+      "endDate": "2022-09-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
   "skills": [
     {
-      "name": "Python",
-      "level": "Avanzado",
+      "name": "Typescript",
+      "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Data Structures and Algorithms", "Data Science", "Machine Learning", "Backend", "Fullstack"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
       "name": "Next.js",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
-      ]
-    },
-    {
-      "name": "Firebase",
-      "level": "Avanzado",
-      "keywords": [
-        "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
-    },
-    {
-      "name": "ROS",
-      "level": "Avanzado",
-      "keywords": [
-        "Robotics"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Docker",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
-      ]
-    },
-    {
-      "name": "C/C++",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
-      ]
-    },
-    {
-      "name": "Matlab",
-      "level": "Avanzado",
-      "keywords": [
-        "Leyes de Control", "Simulaciones"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
@@ -177,6 +161,50 @@
       ]
     },
     {
+      "name": "MongoDB",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Firebase",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "level": "Avanzado",
+      "keywords": [
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "Avanzado",
+      "keywords": [
+        "DevOps"
+      ]
+    },
+    {
       "name": "Tailwind",
       "level": "Avanzado",
       "keywords": [
@@ -184,24 +212,46 @@
       ]
     },
     {
-      "name": "HTML",
-      "level": "Master",
+      "name": "Python",
+      "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend"
+        "Data Structures and Algorithms",
+        "Data Science",
+        "Machine Learning",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
-      "name": "CSS",
-      "level": "Master",
+      "name": "Git",
+      "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
       ]
     },
     {
-      "name": "JavaScript",
-      "level": "Master",
+      "name": "C/C++",
+      "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "ROS",
+      "level": "Avanzado",
+      "keywords": [
+        "Robotics"
+      ]
+    },
+    {
+      "name": "Matlab",
+      "level": "Avanzado",
+      "keywords": [
+        "Leyes de Control",
+        "Simulaciones"
       ]
     }
   ],
@@ -215,21 +265,25 @@
       "fluency": "Advanced"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
   "projects": [
     {
-      "name": "Cancellati.es",
-      "isActive": true,
+      "name": "Cancellati",
+      "isActive": false,
       "description": "Cancellati es el mejor aliado para gerentes de hotel. Predicción de cancelaciones, reserva por reserva, para que tú decidas y actúes.",
       "highlights": [
         "WebApp",
@@ -261,11 +315,11 @@
       "description": "Implementación del famoso juego Gobblets Gobblers, una variante del Tres en Raya. Demuestra lo que vales frente a un bot! 🕹",
       "highlights": [
         "Game",
-        "CLI", 
+        "CLI",
         "C/C++",
         "Bot"
       ],
-      "url": "https://github.com/letesdev/IMTA-PRASE-GobbletGobblers", 
+      "url": "https://github.com/letesdev/IMTA-PRASE-GobbletGobblers",
       "github": "https://github.com/letesdev/IMTA-PRASE-GobbletGobblers"
     },
     {
@@ -275,7 +329,7 @@
       "highlights": [
         "WebApp",
         "GitHub Pages",
-        "iOS", 
+        "iOS",
         "Android",
         "Framework7"
       ],
@@ -291,7 +345,7 @@
         "CLI",
         "AIS data"
       ],
-      "url": "https://github.com/letesdev/maritIMTguard", 
+      "url": "https://github.com/letesdev/maritIMTguard",
       "github": "https://github.com/letesdev/maritIMTguard"
     },
     {
@@ -303,7 +357,7 @@
         "Control",
         "Bio-inspiración"
       ],
-      "url": "https://github.com/letesdev/IMTA-ROBIO", 
+      "url": "https://github.com/letesdev/IMTA-ROBIO",
       "github": "https://github.com/letesdev/IMTA-ROBIO"
     }
   ]
