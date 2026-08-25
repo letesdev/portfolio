@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro"
 import quotes from "../../../quotes.json"
+import { ChevronLeft, ChevronRight } from "@lucide/astro"
 
 import { basics } from "@cv"
 const { summary } = basics
@@ -51,12 +52,12 @@ const { summary } = basics
     </div>
 
     <div class="flex items-center justify-between gap-4 pt-4" data-quote-controls>
-      <button type="button" class="text-sm text-gray-600 underline" data-quote-prev aria-label="Mostrar cita anterior">
-        Anterior
+      <button type="button" class="text-sm text-gray-600" data-quote-prev aria-label="Mostrar cita anterior">
+        <ChevronLeft aria-hidden="true" />
       </button>
       <span class="text-sm text-gray-500" data-quote-counter aria-live="polite">1 / {quotes.length}</span>
-      <button type="button" class="text-sm text-gray-600 underline" data-quote-next aria-label="Mostrar cita siguiente">
-        Siguiente
+      <button type="button" class="text-sm text-gray-600" data-quote-next aria-label="Mostrar cita siguiente">
+        <ChevronRight aria-hidden="true" />
       </button>
     </div>
   </div>
