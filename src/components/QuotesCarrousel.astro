@@ -1,6 +1,6 @@
 ---
 import quotes from "../../quotes.json"
-import { Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck } from "@lucide/astro"
+import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, MicVocal } from "@lucide/astro"
 ---
 
 <div
@@ -32,6 +32,8 @@ import { Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck } from "@luci
                 {quote.source.type.toLowerCase() === "book" && <BookOpenText aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {quote.source.type.toLowerCase() === "web article" && <GlobeCheck aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {quote.source.type.toLowerCase() === "tweet" && <Bird aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                {quote.source.type.toLowerCase() === "music" && <MicVocal aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                {quote.source.type.toLowerCase() === "podcast" && <AudioLines aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {quote.source.type.toLowerCase() === "family" && <span aria-hidden="true">🫂</span>}
                 <a href={quote.source.url} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">
                   {quote.source.name.trim()}
@@ -39,6 +41,8 @@ import { Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck } from "@luci
               </>
             ) : (
               <>
+                {quote.source.type.toLowerCase() === "music" && <MicVocal aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                {quote.source.type.toLowerCase() === "podcast" && <AudioLines aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {quote.source.type.toLowerCase() === "family" && <span aria-hidden="true">🫂</span>}
                 {quote.source.name}
               </>
