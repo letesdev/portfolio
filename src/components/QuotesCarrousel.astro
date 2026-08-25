@@ -36,10 +36,7 @@ import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, 
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "podcast" && <AudioLines aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "proverb" && <Signature aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "family" && <span aria-hidden="true">🫂</span>}
-                <a href={quote.source.url} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">
-                  {quote.source.name.trim()}
-                </a>
-              </>
+                <a href={quote.source.url} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">{quote.source.name.trim()}</a></>
             ) : (
               <>
                 {((quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "music" || (quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "song") && <MicVocal aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
@@ -49,13 +46,7 @@ import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, 
                 {quote.source.name}
               </>
             )
-          }, {quote.authorUrl ? (
-            <a href={quote.authorUrl} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">
-              {quote.author}
-            </a>
-          ) : (
-            quote.author
-          )}.
+          }, {quote.authorUrl ? <a href={quote.authorUrl} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">{quote.author}</a> : quote.author}.
         </p>
       </blockquote>
     ))}
