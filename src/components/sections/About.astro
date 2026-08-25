@@ -40,7 +40,7 @@ const { summary } = basics
                 <>
                   {quote.source.type.toLowerCase() === "book" && <BookOpenText aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                   {quote.source.type.toLowerCase() === "web article" && <GlobeCheck aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
-                  <a href={quote.source.url} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                  <a href={quote.source.url} class="underline" target="_blank" rel="noopener noreferrer">
                     {quote.source.name.trim()}
                   </a>
                 </>
