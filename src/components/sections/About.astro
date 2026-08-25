@@ -1,7 +1,7 @@
 ---
 import Section from "../Section.astro"
 import quotes from "../../../quotes.json"
-import { ChevronLeft, ChevronRight } from "@lucide/astro"
+import { BookOpenText, ChevronLeft, ChevronRight, GlobeCheck } from "@lucide/astro"
 
 import { basics } from "@cv"
 const { summary } = basics
@@ -38,6 +38,8 @@ const { summary } = basics
             “{quote.text}” — {
               quote.source.url ? (
                 <a href={quote.source.url} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                  {quote.source.type.toLowerCase() === "book" && <BookOpenText aria-hidden="true" class="inline-block align-[-0.15em]" />}
+                  {quote.source.type.toLowerCase() === "web article" && <GlobeCheck aria-hidden="true" class="inline-block align-[-0.15em]" />}
                   {quote.source.name}
                 </a>
               ) : (
