@@ -1,20 +1,116 @@
 ---
 import Section from "../Section.astro"
+import quotes from "../../../quotes.json"
+import { BookOpenText, ChevronLeft, ChevronRight, GlobeCheck } from "@lucide/astro"
 
 import { basics } from "@cv"
-const { summary, quote } = basics
-const {text, book, author, bookUrl, authorUrl} = quote
+const { summary } = basics
 ---
 
 <Section title="Sobre mí">
-  <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 -mx-5">
-    <p>
-      “{text}” 
-      — <a href={bookUrl} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">{book}</a>, {author}.
-    </p>
-  </blockquote>
-  
-  <p class="font-sans text-gray-700 dark:text-slate-400 text-pretty pt-3">
+  <p class="font-sans text-gray-700 dark:text-slate-400 text-pretty pt-[5px] pb-3">
     {summary}
   </p>
+
+  <div
+    class="quote-carousel -mx-5"
+    data-quote-carousel
+    data-interval="15000"
+    aria-roledescription="carousel"
+    aria-label="Citas"
+  >
+    <div class="sr-only" data-quote-status aria-live="polite"></div>
+    <div class="quote-carousel__slides" data-quote-slides>
+      {quotes.map((quote, index) => (
+        <blockquote
+          class:list={[
+            "border-l-4 border-gray-300 pl-4 italic text-gray-600",
+            index === 0 ? "" : "hidden",
+          ]}
+          data-quote-slide
+          data-quote-index={index}
+          aria-hidden={index === 0 ? "false" : "true"}
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`Cita ${index + 1} de ${quotes.length}`}
+        >
+          <p>
+            “{quote.text}” — {
+              quote.source.url ? (
+                <>
+                  {quote.source.type.toLowerCase() === "book" && <BookOpenText aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                  {quote.source.type.toLowerCase() === "web article" && <GlobeCheck aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                  <a href={quote.source.url} class="underline decoration-1 underline-offset-2" target="_blank" rel="noopener noreferrer">
+                    {quote.source.name.trim()}
+                  </a>
+                </>
+              ) : (
+                quote.source.name
+              )
+            }, {quote.authorUrl ? (
+              <a href={quote.authorUrl} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                {quote.author}
+              </a>
+            ) : (
+              quote.author
+            )}.
+          </p>
+        </blockquote>
+      ))}
+    </div>
+
+    <div class="flex items-center justify-end gap-4 pt-4" data-quote-controls>
+      <button type="button" class="text-sm text-gray-600" data-quote-prev aria-label="Mostrar cita anterior">
+        <ChevronLeft aria-hidden="true" />
+      </button>
+      <span class="text-sm text-gray-500" data-quote-counter aria-live="polite">1 / {quotes.length}</span>
+      <button type="button" class="text-sm text-gray-600" data-quote-next aria-label="Mostrar cita siguiente">
+        <ChevronRight aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+
 </Section>
+
+<script>
+  const QUOTE_INTERVAL_MS = 15_000
+
+  document.querySelectorAll<HTMLElement>("[data-quote-carousel]").forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-quote-slide]"))
+    const nextButton = carousel.querySelector<HTMLButtonElement>("[data-quote-next]")
+    const previousButton = carousel.querySelector<HTMLButtonElement>("[data-quote-prev]")
+    const counter = carousel.querySelector<HTMLElement>("[data-quote-counter]")
+    const status = carousel.querySelector<HTMLElement>("[data-quote-status]")
+    const interval = Number(carousel.dataset.interval) || QUOTE_INTERVAL_MS
+
+    if (slides.length < 2) {
+      carousel.querySelector("[data-quote-controls]")?.classList.add("hidden")
+      return
+    }
+
+    for (let index = slides.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1))
+      carousel.querySelector("[data-quote-slides]")?.append(slides[randomIndex])
+      slides.splice(randomIndex, 1)
+    }
+
+    const randomizedSlides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-quote-slide]"))
+    let currentIndex = 0
+
+    const showSlide = (index: number) => {
+      currentIndex = (index + randomizedSlides.length) % randomizedSlides.length
+      randomizedSlides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === currentIndex
+        slide.classList.toggle("hidden", !isActive)
+        slide.setAttribute("aria-hidden", String(!isActive))
+      })
+      counter!.textContent = `${currentIndex + 1} / ${randomizedSlides.length}`
+      status!.textContent = `Cita ${currentIndex + 1} de ${randomizedSlides.length}`
+    }
+
+    nextButton?.addEventListener("click", () => showSlide(currentIndex + 1))
+    previousButton?.addEventListener("click", () => showSlide(currentIndex - 1))
+    showSlide(0)
+    window.setInterval(() => showSlide(currentIndex + 1), interval)
+  })
+</script>

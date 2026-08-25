@@ -14,6 +14,11 @@ export default defineConfig({
       permanent: true,
     },
   },
+  // The v0 preview runtime does not provide the app template metadata
+  // expected by Astro's development toolbar.
+  devToolbar: {
+    enabled: false,
+  },
   // server: { host: true },
   integrations: [mdx(), tailwind()]
 });
