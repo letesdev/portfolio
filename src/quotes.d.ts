@@ -1,7 +1,10 @@
 export interface Quote {
   text: string
-  source: string
-  sourceUrl?: string
+  source: {
+    type: string
+    url: string
+    name: string
+  }
   date?: string
   author: string
   authorUrl?: string

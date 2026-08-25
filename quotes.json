@@ -1,16 +1,22 @@
 [
   {
     "text": "The problem today is most people spend time CONSUMING versus CREATING. Make a real commitment to start creating. It will benefit both your personal and professional life.",
-    "source": "The Visual MBA",
-    "sourceUrl": "https://www.instagram.com/visualmba",
+    "source": {
+      "type": "social media",
+      "url": "https://www.instagram.com/visualmba",
+      "name": "The Visual MBA"
+    },
     "date": "",
     "author": "Jason Barron",
     "authorUrl": ""
   },
   {
     "text": "The hard part of startups is product: knowing what to build, and being able to build it. And that kind of knowledge comes from studying computer science or mechanical engineering or molecular biology, not management or finance.",
-    "source": "Paul Graham",
-    "sourceUrl": "https://paulgraham.com/prepare.html#f1n",
+    "source": {
+      "type": "web article",
+      "url": "https://paulgraham.com/prepare.html#f1n",
+      "name": "Paul Graham"
+    },
     "date": "25-08-2026",
     "author": "Paul Graham",
     "authorUrl": ""

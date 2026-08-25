@@ -32,12 +32,12 @@ const { summary } = basics
         >
           <p>
             “{quote.text}” — {
-              quote.sourceUrl ? (
-                <a href={quote.sourceUrl} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
-                  {quote.source}
+              quote.source.url ? (
+                <a href={quote.source.url} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                  {quote.source.name}
                 </a>
               ) : (
-                quote.source
+                quote.source.name
               )
             }, {quote.authorUrl ? (
               <a href={quote.authorUrl} class="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
