@@ -20,7 +20,7 @@
     "date": "25-08-2026",
     "author": "Paul Graham",
     "authorUrl": ""
-  }, 
+  },
   {
     "text": "Every organisation must build human capital (the knowledge, judgment, relationships, and pattern recognition of its people) alongside token capital, the AI capability and institutional learning it builds and owns.",
     "source": {
@@ -32,7 +32,7 @@
     "author": "Satya Nadella",
     "authorUrl": "https://x.com/satyanadella"
   },
-{
+  {
     "text": "I just want the outcome to be something that I can look back and I can be proud of.",
     "source": {
       "source": "song",
@@ -42,5 +42,17 @@
     "date": "14-07-2024",
     "author": "Macklemore",
     "authorUrl": ""
+  },
+  {
+    "text": "Bet the jockey (execution), not the horse (idea). Execution is critical.",
+    "source": {
+      "source": "proverb",
+      "url": "",
+      "name": ""
+    },
+    "date": "14-07-2024",
+    "author": "Anonymous",
+    "authorUrl": ""
   }
+  
 ]
