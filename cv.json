@@ -298,7 +298,7 @@
     {
       "name": "barrec",
       "isActive": true,
-      "description": "Un espacio para profesionales del movimiento. Crea clases de barre y pilates en un lienzo enfocado. Diseña secuencias, controla la musicalidad y enseña sin perder el flujo.",
+      "description": "Un espacio para profesionales de barre. Crea clases de barre y pilates en un lienzo enfocado. Diseña secuencias, controla la musicalidad y enseña sin perder el flujo.",
       "highlights": [
         "App",
         "Node.js",
