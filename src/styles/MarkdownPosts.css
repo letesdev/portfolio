@@ -94,7 +94,7 @@
 
 .post_title {
     box-sizing: border-box;
-    font-family: var(--font-headers), monospace;
+    font-family: 'Syne Mono', monospace;
     font-size: clamp(1.75rem, 5vw, 3rem);
     font-weight: 400;
     letter-spacing: -0.04em;

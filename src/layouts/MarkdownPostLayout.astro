@@ -1,7 +1,7 @@
 ---
 // import TableOfContents from "@/components/TableOfContents.astro";
 import Layout from "./Layout.astro";
-import "../styles/MarkdownPosts.css"
+import "../styles/MarkdownPosts.css";
 const { frontmatter } = Astro.props;
 ---
 
@@ -10,17 +10,25 @@ const { frontmatter } = Astro.props;
     <!-- <p>Escrito por {frontmatter.author}</p> -->
     <main class="post-shell">
         <div class="post-header">
-            <a href="/portfolio/posts/" class="return_home" aria-label="Volver a todos los ensayos">
+            <a
+                href="/portfolio/posts/"
+                class="return_home"
+                aria-label="Volver a todos los ensayos"
+            >
                 <i class="material-icons" aria-hidden="true">arrow_back</i>
                 <span>Todos los ensayos</span>
             </a>
             <h1 class="post_title">{frontmatter.title}</h1>
             <div class="post-meta">
-                <p>{frontmatter.date.toLocaleDateString("es-es", {
-                    year: 'numeric',
-                    month: '2-digit',
-                    day: 'numeric'
-                })}</p>
+                <p>
+                    {
+                        frontmatter.date.toLocaleDateString("es-es", {
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "numeric",
+                        })
+                    }
+                </p>
             </div>
         </div>
         <div class="post_body">
