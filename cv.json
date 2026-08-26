@@ -144,20 +144,35 @@
       ]
     },
     {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Astro",
+      "name": "React",
       "level": "Avanzado",
       "keywords": [
         "Frontend"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "NodeJS",
+      "level": "Avanzado",
+      "keywords": [
+        "Backend"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Avanzado",
+      "keywords": [
+        "Data Structures and Algorithms",
+        "Data Science",
+        "Machine Learning",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
@@ -191,10 +206,20 @@
       ]
     },
     {
-      "name": "Kubernetes",
+      "name": "Next.js",
       "level": "Avanzado",
       "keywords": [
-        "DevOps"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Avanzado",
+      "keywords": [
+        "Frontend"
       ]
     },
     {
@@ -205,21 +230,10 @@
       ]
     },
     {
-      "name": "Tailwind",
+      "name": "Kubernetes",
       "level": "Avanzado",
       "keywords": [
-        "Frontend"
-      ]
-    },
-    {
-      "name": "Python",
-      "level": "Avanzado",
-      "keywords": [
-        "Data Structures and Algorithms",
-        "Data Science",
-        "Machine Learning",
-        "Backend",
-        "Fullstack"
+        "DevOps"
       ]
     },
     {
@@ -282,15 +296,25 @@
   ],
   "projects": [
     {
+      "name": "barrec",
+      "isActive": true,
+      "description": "Un espacio para profesionales del movimiento. Crea clases de barre y pilates en un lienzo enfocado. Diseña secuencias, controla la musicalidad y enseña sin perder el flujo.",
+      "highlights": [
+        "App",
+        "Node.js",
+        "Next.js",
+        "PostgreSQL"
+      ],
+      "url": "https://barrec.vercel.app"
+    },
+    {
       "name": "Cancellati",
       "isActive": false,
       "description": "Cancellati es el mejor aliado para gerentes de hotel. Predicción de cancelaciones, reserva por reserva, para que tú decidas y actúes.",
       "highlights": [
-        "WebApp",
+        "App",
         "Machine Learning",
-        "Static Web",
         "Node.js",
-        "Next.js",
         "Firebase"
       ],
       "url": "https://cancellati.es"
@@ -327,7 +351,7 @@
       "isActive": true,
       "description": "Aplicación completa para iOS y Android, que al final acabó siendo una página web 😋",
       "highlights": [
-        "WebApp",
+        "App",
         "GitHub Pages",
         "iOS",
         "Android",
