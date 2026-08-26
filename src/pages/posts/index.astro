@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('es-ES', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  });
+---
+
+<Layout title="Blog — LetesDev">
+  <main class="min-h-screen px-5 pb-24 pt-32 text-neutral-950 sm:px-8 md:px-12">
+    <div class="mx-auto max-w-5xl">
+      <header class="mb-20 max-w-2xl">
+        <h1 class="font-headers text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl">Escritos</h1>
+        <p class="mt-8 max-w-lg text-lg leading-7 text-neutral-600">
+          Ideas, aprendizajes y pequeñas obsesiones sobre tecnología, productos y la vida alrededor del código.
+        </p>
+      </header>
+
+      <section aria-labelledby="posts-heading">
+        <div class="mb-4 flex items-center justify-between border-b border-neutral-200 pb-3">
+          <h2 id="posts-heading" class="font-mono text-xs uppercase tracking-[0.18em] text-neutral-500">Todos los artículos</h2>
+          <span class="font-mono text-xs text-neutral-500">{posts.length.toString().padStart(2, '0')}</span>
+        </div>
+
+        {posts.length > 0 ? (
+          <ul class="divide-y divide-neutral-200">
+            {posts.map((post, index) => (
+              <li>
+                <a
+                  href={`/portfolio/posts/${post.slug}/`}
+                  class="group grid gap-4 py-7 transition-colors hover:text-neutral-500 sm:grid-cols-[5rem_1fr_auto] sm:items-start sm:gap-8"
+                >
+                  <span class="font-mono text-xs text-neutral-500">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 class="font-headers text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">{post.data.title}</h3>
+                    <p class="mt-3 max-w-2xl text-sm leading-6 text-neutral-500 transition-colors group-hover:text-neutral-600">{post.data.description}</p>
+                    <div class="mt-4 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] tracking-[0.12em] text-neutral-400">
+                      {post.data.tags.map((tag) => <span>#{tag}</span>)}
+                    </div>
+                  </div>
+                  <time datetime={post.data.date.toISOString()} class="font-mono text-xs text-neutral-500 sm:pt-1">{formatDate(post.data.date)}</time>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="py-12 text-neutral-500">Todavía no hay artículos publicados.</p>
+        )}
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Syne Mono', monospace;
+  }
+</style>
