@@ -9,6 +9,7 @@ import ThemeToggle from "./ThemeToggle.astro";
   >
     <a class="nav-link" href="/">Home</a>
     <a class="nav-link" href="/posts">Blog</a>
+    <span class="nav-divider" aria-hidden="true">|</span>
     <ThemeToggle />
   </nav>
 </header>
@@ -23,6 +24,14 @@ import ThemeToggle from "./ThemeToggle.astro";
     animation: nav-shadow 1ms linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
+  }
+
+  .nav-divider {
+    color: currentColor;
+    font-size: 0.875rem;
+    line-height: 1;
+    opacity: 0.35;
+    user-select: none;
   }
 
   .nav-link {
