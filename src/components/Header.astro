@@ -2,24 +2,56 @@
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<!-- <header class="fixed flex items-center justify-center w-full mx-auto m-2 z-10" > -->
-<header class="fixed flex items-center justify-end top-0 right-0 sm:right-56 m-3 z-10">
-
-    <nav class="flex max-w-3xl mx-auto py-3 px-3 rounded-full text-gray-600 dark:text-gray-200 justify-end items-center">
-        <ThemeToggle />
-    </nav>
+<header class="fixed inset-x-0 top-0 z-10 flex justify-center px-4 py-3 text-black">
+  <nav
+    aria-label="Main navigation"
+    class="navbar-shell flex w-full max-w-xl items-center justify-center gap-1 rounded-full px-2 py-2"
+  >
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/posts">Blog</a>
+    <ThemeToggle />
+  </nav>
 </header>
 
 <style>
-    nav {
-        animation: nav-shadown 1s linear both;
-        animation-timeline: scroll();
-        animation-range: 0 100px;
-    }
+  .navbar-shell {
+    background: transparent;
+    transition:
+      background-color 180ms ease,
+      box-shadow 180ms ease,
+      backdrop-filter 180ms ease;
+    animation: nav-shadow 1ms linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
 
-    @keyframes nav-shadown {
-        to {
-            @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
-        }
+  .nav-link {
+    border-radius: 9999px;
+    color: currentColor;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 160ms ease, opacity 160ms ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    background: rgb(0 0 0 / 0.06);
+    opacity: 0.7;
+    outline: none;
+  }
+
+  @keyframes nav-shadow {
+    to {
+      background: rgb(255 255 255 / 0.72);
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+      backdrop-filter: blur(14px);
     }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .navbar-shell {
+      animation: none;
+    }
+  }
 </style>
