@@ -1,24 +1,28 @@
 ---
-import Section from "../Section.astro"
-import astro from "@/icons/astro.astro"
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
+import Section from "../Section.astro";
+import astro from "@/icons/astro.astro";
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import TypeScript from "@/icons/type.astro";
+import Node from "@/icons/node.astro";
+import MySQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import Next from "@/icons/next.astro";
 import ROS from "@/icons/ros.astro";
-import Python from "@/icons/Python.astro"
-import C from "@/icons/C.astro"
-import Docker from "@/icons/docker.astro"
-import Matlab from "@/icons/Matlab.astro"
-import Firebase from "@/icons/Firebase.astro"
-import { skills } from "@cv"
+import Python from "@/icons/Python.astro";
+import Docker from "@/icons/docker.astro";
+import Matlab from "@/icons/Matlab.astro";
+import Firebase from "@/icons/Firebase.astro";
+import MongoDB from "@/icons/MongoDB.astro";
+import PostgreSQL from "@/icons/PostgreSQL.astro";
+import Typescript from "@/icons/Typescript.astro";
+import Kubernetes from "@/icons/Kubernetes.astro";
+import React from "@/icons/React.astro";
+import NodeJS from "@/icons/NodeJS.astro";
+import { skills } from "@cv";
 
 const SKILLS_ICONS: Record<string, any> = {
   astro,
@@ -26,7 +30,6 @@ const SKILLS_ICONS: Record<string, any> = {
   CSS,
   JavaScript,
   TypeScript,
-  React,
   Node,
   MySQL,
   Git,
@@ -35,27 +38,31 @@ const SKILLS_ICONS: Record<string, any> = {
   Tailwind,
   ROS,
   Python,
-  C,
   Docker,
   Matlab,
   Firebase,
-}
+  MongoDB,
+  PostgreSQL,
+  Typescript,
+  Kubernetes,
+  React,
+  NodeJS,
+};
 ---
 
 <Section title="Habilidades">
   <ul class="inline-flex gap-2 flex-wrap">
     {
       skills.map(({ name }) => {
-        const iconName =  name === "Next.js" ? "Next" : 
-                          name === "C/C++" ? "C" :
-                          name === "Astro" ? "astro": name;
-        const Icon = SKILLS_ICONS[iconName]
+        const iconName =
+          name === "Next.js" ? "Next" : name === "Astro" ? "astro" : name;
+        const Icon = SKILLS_ICONS[iconName];
 
         return (
           <li class="flex items-center bg-gray-200 dark:bg-slate-700 text-black dark:text-slate-100 rounded-md font-medium gap-1 px-2 py-1">
             {Icon && <Icon />} <span>{name}</span>
           </li>
-        )
+        );
       })
     }
   </ul>
