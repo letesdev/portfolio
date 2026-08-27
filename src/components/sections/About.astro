@@ -1,17 +1,17 @@
 ---
-import Section from "../Section.astro"
-import QuotesCarrousel from "../QuotesCarrousel.astro"
+import Section from "../Section.astro";
+import QuotesCarrousel from "../QuotesCarrousel.astro";
 
-import { basics } from "@cv"
-const { summary } = basics
+import { basics } from "@cv";
+const { summary } = basics;
 ---
 
-<Section title="Sobre mí">
-  <p class="font-sans text-gray-700 dark:text-slate-400 text-pretty pt-[5px] pb-3">
+<Section title="About me">
+  <p
+    class="font-sans text-gray-700 dark:text-slate-400 text-pretty pt-[5px] pb-3"
+  >
     {summary}
   </p>
 
   <QuotesCarrousel />
-
 </Section>
-
