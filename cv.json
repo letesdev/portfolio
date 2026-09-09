@@ -296,6 +296,18 @@
   ],
   "projects": [
     {
+      "name": "silvia-valin.es",
+      "isActive": true,
+      "description": "Web para Silvia Valín: cuidados de enfermería a domicilio e instrumentación quirúrgica. Diseño a medida.",
+      "highlights": [
+        "Web",
+        "Astro",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "url": "https://silvia-valin-es.vercel.app"
+    },
+    {
       "name": "barrec",
       "isActive": true,
       "description": "Un espacio para profesionales de barre. Crea clases, sin perder la  musicalidad y enseña sin perder el flujo.",
