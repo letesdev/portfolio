@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://letesdev.github.io/portfolio/sitemap-index.xml
