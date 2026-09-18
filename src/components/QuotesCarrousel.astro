@@ -1,6 +1,6 @@
 ---
 import quotes from "../../quotes.json"
-import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, MicVocal, Signature } from "@lucide/astro"
+import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, MicVocal, NotebookPen, Signature } from "@lucide/astro"
 ---
 
 <div
@@ -31,6 +31,7 @@ import { AudioLines, Bird, BookOpenText, ChevronLeft, ChevronRight, GlobeCheck, 
               <>
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "book" && <BookOpenText aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "web article" && <GlobeCheck aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
+                {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "blog" && <NotebookPen aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "tweet" && <Bird aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {((quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "music" || (quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "song") && <MicVocal aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
                 {(quote.source.type ?? quote.source.source)?.trim().toLowerCase() === "podcast" && <AudioLines aria-hidden="true" class="inline-block size-[1em] align-[-0.15em]" />}
