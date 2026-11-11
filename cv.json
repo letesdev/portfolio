@@ -7,7 +7,7 @@
     "email": "carlosantos2807@gmail.com",
     "phone": "+34 676040034",
     "cv": "/portfolio/CV_EN-Carlos_Santos_Seisdedos-2609.pdf",
-    "url": "",
+    "url": "https://letesdev.github.io/portfolio",
     "summary": "Aburrido de Excels y PowerPoints, es en este pequeño espacio dónde descargo mi curiosidad por la programación 😋",
     "location": {
       "address": "",
@@ -33,14 +33,14 @@
     {
       "name": "Renault",
       "position": "Cloud Software Engineer",
-      "startDate": "2024-11-31",
-      "endDate": "2024-12-31",
+      "startDate": "2024-11-30",
+      "endDate": null,
       "summary": "I realized I love to ship products, so I've requested a shift to the Cloud team and: now, we're bulding 😎"
     },
     {
       "name": "Renault",
       "position": "AD Technical Project Manager",
-      "startDate": "2024-11-31",
+      "startDate": "2024-11-30",
       "endDate": "2024-12-31",
       "summary": "Confidential"
     },
@@ -48,7 +48,7 @@
       "name": "Renault",
       "position": "R&AE ADAS Technical Project Manager",
       "startDate": "2023-11-10",
-      "endDate": "2024-11-31",
+      "endDate": "2024-11-30",
       "summary": "Piloto de Innovación ADAS en el departamento de R&AE para la definición y el diseño del próximo sistema frenado automático de emergencia (Automatic Emergency Braking, AEB), anticipándome a los ensayos de la Euro NCAP 2026. Responsable de la coordinación de los recursos y las actividades que comprenden desde las necesidades cliente hasta la validación final (equivalentes a ASPICE): especificaciones sistema, software, safety, de ciberseguridad y electrónicas."
     },
     {
